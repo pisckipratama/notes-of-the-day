@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/stylesheets/style.css">
+  <title>Note of The Day</title>
+</head>
+
+<body>
+  <div class="container service">
+    <h1 class="white-text center-align">Notes of The Day</h1>
+
+    <div class="row" id="app">
+      <div class="col s12 m6 l3 center-align" v-for="item in results" :key="item._id">
+        <div class="card">
+          <div class="card-content">
+            <h5>{{ item.title }}</h5>
+            <p>{{ item.bodyTruncated }}</p>
+          </div>
+          <div class="card-action"><a v-bind:href="item.url">Read more...</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./assets/javascript/script.js"></script>
+</body>
+
+</html>

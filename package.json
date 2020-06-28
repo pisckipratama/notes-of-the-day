@@ -1,0 +1,24 @@
+{
+  "name": "notes-of-the-day",
+  "version": "1.0.0",
+  "description": "notes restful api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production node app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Piscki F. Pratama",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.20"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4"
+  }
+}
