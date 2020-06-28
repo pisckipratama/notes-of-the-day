@@ -13,6 +13,8 @@ MEVN (MongoDB, ExpressJS, VueJS, NodeJS)
 - [ ] Create authentication with JWT
 - [ ] Create authentication with Google OAuth 2.0
 - [ ] Create Unit Testing for notes API
+- [ ] Create docgen or swagger to documentation API
+- [ ] Implement OOP to controllers
 
 #### Run This App
 - setup the ```.env```
