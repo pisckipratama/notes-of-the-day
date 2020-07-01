@@ -15,6 +15,7 @@ MEVN (MongoDB, ExpressJS, VueJS, NodeJS)
 - [ ] Create Unit Testing for notes API
 - [ ] Create docgen or swagger to documentation API
 - [ ] Implement OOP to controllers
+- [ ] Create Authentication
 
 #### Run This App
 - setup the ```.env```
