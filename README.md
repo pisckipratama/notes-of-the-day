@@ -7,7 +7,7 @@ MEVN (MongoDB, ExpressJS, VueJS, NodeJS)
 
 #### ToDo
 - [ ] Create Landing Page and Show Note when click Read More
-- [ ] Create add API
+- [x] Create add API
 - [ ] Create edit API
 - [ ] Create delete API
 - [ ] Create authentication with JWT
