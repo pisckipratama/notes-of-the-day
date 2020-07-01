@@ -1,5 +1,4 @@
 const Notes = require('../models/Notes');
-const { json } = require('express');
 
 const getAllNotes = async (req, res) => {
   try {
@@ -22,7 +21,21 @@ const getOneNote = async (req, res) => {
   }
 };
 
+const postNote = async (req, res) => {
+  const { title, body } = req.body;
+
+  try {
+    const dataNote = new Notes({ title, body });
+    const save = await dataNote.save();
+    res.status(201).json({ msg: "success", data: save });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ msg: "server error", error: error.message });
+  }
+}
+
 module.exports = {
   getAllNotes,
-  getOneNote
+  getOneNote,
+  postNote
 };

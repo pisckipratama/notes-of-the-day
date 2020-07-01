@@ -7,5 +7,6 @@ router.get('/', (req, res) => {
 
 router.get('/api/v1/notes', notes.getAllNotes);
 router.get('/api/v1/notes/:id', notes.getOneNote);
+router.post('/api/v1/notes/', notes.postNote);
 
 module.exports = router;
