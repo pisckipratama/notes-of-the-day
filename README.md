@@ -8,14 +8,13 @@ MEVN (MongoDB, ExpressJS, VueJS, NodeJS)
 #### ToDo
 - [ ] Create Landing Page and Show Note when click Read More
 - [x] Create add API
-- [ ] Create edit API
+- [x] Create edit API
 - [ ] Create delete API
 - [ ] Create authentication with JWT
 - [ ] Create authentication with Google OAuth 2.0
 - [ ] Create Unit Testing for notes API
 - [ ] Create docgen or swagger to documentation API
 - [ ] Implement OOP to controllers
-- [ ] Create Authentication
 
 #### Run This App
 - setup the ```.env```
