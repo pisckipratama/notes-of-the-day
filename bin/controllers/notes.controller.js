@@ -37,10 +37,23 @@ const postNote = async (req, res) => {
 const editNote = async (req, res) => {
   try {
     let note = await Notes.find({ _id: req.params.id });
-    if (!note) return res.status(404).json({ success: false, message: "data not found!" });
+    if (note.length === 0) return res.status(404).json({ success: false, message: "data not found!" });
 
     await Notes.updateOne({ _id: req.params.id }, req.body);
-    res.status(202).json({ success: true, message: "data edited" });
+    res.json({ success: true, message: "data edited" });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ msg: "server error", error: error.message });
+  }
+};
+
+const deleteNote = async (req, res) => {
+  try {
+    let note = await Notes.find({ _id: req.params.id });
+    if (note.length === 0) return res.status(404).json({ success: false, message: "data not found!" });
+
+    await Notes.deleteOne({ _id: req.params.id });
+    res.json({ success: true, message: "data deleted!" });
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ msg: "server error", error: error.message });
@@ -51,5 +64,6 @@ module.exports = {
   getAllNotes,
   getOneNote,
   postNote,
-  editNote
+  editNote,
+  deleteNote
 };

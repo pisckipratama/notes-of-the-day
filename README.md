@@ -9,7 +9,7 @@ MEVN (MongoDB, ExpressJS, VueJS, NodeJS)
 - [ ] Create Landing Page and Show Note when click Read More
 - [x] Create add API
 - [x] Create edit API
-- [ ] Create delete API
+- [x] Create delete API
 - [ ] Create authentication with JWT
 - [ ] Create authentication with Google OAuth 2.0
 - [ ] Create Unit Testing for notes API
